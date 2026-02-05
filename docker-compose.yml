@@ -15,10 +15,10 @@ services:
       - dokploy-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.<unique-name>.rule=Host(`your-domain.com`)"
-      - "traefik.http.routers.<unique-name>.entrypoints=websecure"
-      - "traefik.http.routers.<unique-name>.tls.certResolver=letsencrypt"
-      - "traefik.http.services.<unique-name>.loadbalancer.server.port=3000"
+      - "traefik.http.routers.testapp.rule=Host(`test-app-cefunc-a85d40-72-62-45-228.traefik.me`)"
+      - "traefik.http.routers.testapp.entrypoints=websecure"
+      - "traefik.http.routers.testapp.tls.certResolver=letsencrypt"
+      - "traefik.http.services.testapp.loadbalancer.server.port=3000"
 networks:
   dokploy-network:
     external: true
